@@ -25,5 +25,16 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
         }
-    }
+        if(transform.position.x < -7.5f)
+        {
+            transform.position = new Vector3(-7.5f, transform.position.y, transform.position.z);
+        }
+       if(transform.position.x > 7.5f)
+        {
+            transform.position = new Vector3(7.5f, transform.position.y, transform.position.z);
+        }
+       
+  
+}
+
 }
