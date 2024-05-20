@@ -21,14 +21,14 @@ public class CarSpawner : MonoBehaviour
     {
         int rand = Random.Range(0, car.Length);
         float randXPos = Random.Range(-2f, 2f);
-        Instantiate(car[rand],new Vector3(randXPos,transform.position.y,transform.position.z), Quaternion.identity);
+        Instantiate(car[rand],new Vector3(randXPos,transform.position.y,transform.position.z), Quaternion.Euler(0,0,90));
     }
     IEnumerator SpawnCars()
     {
       while(true) {
 
 
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.55f);
             Cars(); }
 
     }
