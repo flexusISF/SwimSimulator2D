@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 21247642}
   - component: {fileID: 8205711326861716419}
   - component: {fileID: 6908721670689058341}
+  - component: {fileID: -1452182688497729193}
+  - component: {fileID: -4240969952380833308}
   m_Layer: 0
   m_Name: minicar_yellow
   m_TagString: Untagged
@@ -213,6 +215,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transform: {fileID: 496430}
   speed: 4
+--- !u!50 &-1452182688497729193
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117432}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &-4240969952380833308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d39fb638f8ce2478f4ad7dc5248613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8119502790643593227, guid: f8ee43625cd4e65448d1d70ce13d1149, type: 3}
+  respawnPoint: {fileID: 0}
 --- !u!1 &132682
 GameObject:
   m_ObjectHideFlags: 0

@@ -264,6 +264,8 @@ GameObject:
   - component: {fileID: 21219550}
   - component: {fileID: -3745064935739290137}
   - component: {fileID: 2691214208590582267}
+  - component: {fileID: -8243156116452252318}
+  - component: {fileID: -3018676354284190874}
   m_Layer: 0
   m_Name: pickup_red
   m_TagString: Untagged
@@ -382,7 +384,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transform: {fileID: 462328}
-  speed: 4
+  speed: 2
+--- !u!50 &-8243156116452252318
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153812}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &-3018676354284190874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d39fb638f8ce2478f4ad7dc5248613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8119502790643593227, guid: f8ee43625cd4e65448d1d70ce13d1149, type: 3}
+  respawnPoint: {fileID: 0}
 --- !u!1 &166816
 GameObject:
   m_ObjectHideFlags: 0
