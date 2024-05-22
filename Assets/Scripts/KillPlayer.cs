@@ -9,7 +9,7 @@ public class KillPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        respawnPoint = GameObject.Find("RespawnPoint").transform;
+        //respawnPoint = GameObject.Find("Respawn Point").transform;
     }
 
     // Update is called once per frame
@@ -19,9 +19,13 @@ public class KillPlayer : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
+
+        Debug.Log($"Enemy hit {other.gameObject.name}");
         if (other.gameObject.CompareTag("Player"))
         {
-            player.transform.position = respawnPoint.position;
+            Debug.Log("KILLED PLAYER");
+
+            player.GetComponent<PlayerMovement>().Respawn();
         }
     }
 }
