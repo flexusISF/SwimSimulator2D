@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     //public Transform transform;
 
     public Transform respawnPoint;
+    public GameObject gameOver;
     
 
 
@@ -16,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        Debug.Log(Time.timeScale);
+        gameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,5 +50,16 @@ public class PlayerMovement : MonoBehaviour
         respawnPoint = GameObject.Find("Respawn Point").transform;
         transform.position = new Vector3(0, -4, 0);
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Cars")
+        {
+            Time.timeScale = 0;
+            gameOver.SetActive(true);
+        }
+        if (collision.gameObject.tag == "Coin")
+        {
+            //Time.timeScale = 0;
+        }
+    }
 }
