@@ -358,7 +358,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 269233897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 980b95f4c034eef4ab9d94b2d3030c25, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c307a388647fed4099b0e1a3b01e8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 269233899}
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1050089105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 980b95f4c034eef4ab9d94b2d3030c25, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c307a388647fed4099b0e1a3b01e8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 1050089107}
@@ -1739,6 +1739,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1333636457095917001, guid: ea764ba06ce1eef4d872f329e47ba086, type: 3}
+      propertyPath: speed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1333636457095917001, guid: ea764ba06ce1eef4d872f329e47ba086, type: 3}
       propertyPath: gameOver
       value: 
