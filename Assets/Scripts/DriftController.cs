@@ -16,6 +16,7 @@ public class DriftController : MonoBehaviour
     float steeringInput = 0;
 
     float rotationAngle = 0;
+    float velocityVsUp = 0;
     //Components
     Rigidbody2D carRigidbody2D;
 
@@ -71,6 +72,28 @@ public class DriftController : MonoBehaviour
         Vector2 rightVeloctiy = transform.right * Vector2.Dot(carRigidbody2D.velocity, transform.right);
 
         carRigidbody2D.velocity = forwardVeloctiy + rightVeloctiy * driftFactor;
+    }
+    float GetLateralVelocity()
+    {
+        //Returns how fast the car is moving sideways.
+        return Vector2.Dot(transform.right, carRigidbody2D.velocity);
+    }
+    public bool IsTireScreeching(out float lateralVelocity, out bool isBraking)
+    {
+        lateralVelocity = GetLateralVelocity();
+        isBraking = false;
+
+        //Check if we are moving forward and if the player is hitting the brakes. In that case the tires should screech.
+        if (accelerationInput < 0 && velocityVsUp > 0)
+        {
+            isBraking = true;
+            return true;
+        }
+        //If we have a lot of side movement then the tires should be screeching
+        if (MathF.Abs(GetLateralVelocity()) > 4.0f)
+            return true;
+
+        return false;
     }
     public void setInputVector(Vector2 inputVector)
     {
